@@ -1,0 +1,412 @@
+$mainC: #564940;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(./img/bankingbg.jpeg);
+    background-position: 0 -200px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif5;
+    background-attachment: fixed;
+}
+
+
+header {
+    // background-image: url(./img/bankingbg.jpeg);
+    width: 100%;
+    height: 100vh;
+    // background-position: 0 -200px;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+
+h1::after {
+    background-color: $mainC;
+    height: 6px;
+    width: 100%;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+nav {
+    // background-color: black;
+    width: 100%;
+    height: 100px;
+    padding: 0 160px;
+    display:flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    p {
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: 2px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 500px;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+            font-size: 1.4rem;
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+    }
+}
+
+li::after {
+    background-color: $mainC;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease 0s;
+}
+
+li:hover::after {
+    width: 100%;
+}
+
+.about {
+    background-color: white;
+    width: 100%;
+    padding: 80px 0 20px;
+    h2 {
+        color: black;
+        text-align: center;
+        font-size: 3rem;
+        margin: 0 auto;
+        opacity: 0;
+        transform: translate(-200px);
+        width: 200px;
+        position: relative;
+    }
+
+    h2::after {
+        content: "";
+        background: $mainC;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    p {
+        color: black;
+        text-align: center;
+        width: 800px;
+        font-size: 1.6rem;
+        margin: 40px auto;
+        opacity: 0;
+        transform: translate(-200px);
+        position: relative;
+    }
+}
+
+.analytics {
+    color: black;
+    background: white;
+    padding-bottom: 80px;
+}
+
+.analytics article {
+    background-color: $mainC;
+    width: 800px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+}
+
+#funds {
+    font-size: 1.8rem;
+}
+
+#mentor {
+    font-size: 1.8rem;
+}
+
+.team {
+    background-color: black;
+    height: 400px;
+    width: 100%;
+    background-image: url("./img/team.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -280px;
+    position: relative;
+
+    h3 {
+        color: black;
+        font-size: 3rem;
+        position: absolute;
+        left: 5%;
+        top: 38%;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    h3::after {
+        content: "";
+        background: $mainC;
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.ourTeam {
+    background-color: white;
+    width: 100%;
+    padding: 80px;
+    position: relative;
+
+    h2 {
+        color: black;
+        text-align: center;
+        font-size: 3rem;
+        margin: 0 auto;
+        opacity: 1;
+        width: 220px;
+        position: relative;
+    }
+
+    h2::after {
+        content: "";
+        background: $mainC;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.teamPics {
+    width: 1000px;
+    height: 200px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        width: auto;
+        height: 200px;
+        border-width: 4px;
+        border-color: $mainC;
+        border-style: solid;
+        transition: height 1s ease;
+    }
+
+    img:hover {
+        height: 280px;
+    }
+}
+
+.who {
+    width: 700px;
+    background-color: $mainC;
+    margin: 0 auto;
+    padding: 40px 80px;
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    h4 {
+        font-size: 1.5rem
+    }
+
+    p {
+        text-align: justify;
+        font-size: 1.4rem;
+    }
+}
+
+#contact {
+    height: 720px;
+    background-color: $mainC;
+    background-image: url("./img/happylady.jpeg");
+    background-size: cover;
+    background-position-y: -280px;
+    position: relative;
+
+    h3 {
+        font-size: 3.2rem;
+        width: 400px;
+        text-align: center;
+        position: absolute;
+        bottom: 50%;
+        margin-bottom: -59px;
+        left: 5%;
+    }
+
+    form {
+        background-color: rgba(255, 255, 255, 0.432);
+        height: 500px;
+        width: 400px;
+        position: absolute;
+        top: 50%;
+        margin-top: -250px;
+        right: 8%;
+        border-radius: 2%;
+        color: $mainC;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 8px 0;
+        div {
+            display: flex;
+            flex-direction: column;
+            label {
+                font-weight: bold;
+            }
+        }
+        input {
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            border-bottom: $mainC solid 2px;
+            height: 28px;
+            outline: none;
+            font-size: 1.2rem;
+        }
+        button {
+            background-color: $mainC;
+            padding: 10px;
+            color: white;
+            width: 100px;
+            font-weight: bold;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(17, 17, 17);
+        }
+    }
+}
+
+button:focus {
+    outline: none;
+}
+
+
+
+footer {
+    background-color: rgb(15, 15, 15);
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.addinfo {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    flex: row;
+    position: relative;
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1.1rem
+    }
+}
+
+.adress {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contactinfo {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.socialM {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    position: absolute;
+    right: 0;
+    top:50%;
+    margin-top: -30px;
+
+    img {
+        width: 60px;
+        height: auto;
+        margin: 0 2px;
+        cursor: pointer;
+        align-self: center;
+    }
+}
+
+//animations
+.appear {
+    animation: show 2s ease forwards;
+}
+
+@keyframes show {
+    from {
+        transform: translate(-200);
+        opacity: 0;
+    } to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
