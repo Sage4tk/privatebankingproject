@@ -45,6 +45,7 @@ h1::after {
     left: 0;
 }
 
+
 nav {
     // background-color: black;
     width: 100%;
@@ -56,6 +57,9 @@ nav {
     z-index: 1;
     align-items: center;
     justify-content: space-between;
+
+    
+
     p {
         font-weight: bold;
         font-size: 2rem;
@@ -81,6 +85,10 @@ nav {
             cursor: pointer;
         }
     }
+}
+
+.burger {
+    display: none;
 }
 
 li::after {
@@ -410,3 +418,146 @@ footer {
     }
 }
 
+@media screen and (max-width: 1366px) {
+
+    .about {
+        h2 {
+            font-size: 2.6rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            text-align: justify;
+        }
+    }
+
+    .team {
+        height: 300px;
+        background-position: 0 -180px;
+
+        h3 {
+            font-size: 2rem;
+        }
+    }
+
+    .ourTeam {
+        h2 {
+            font-size: 2.8rem;
+        }
+        .teamPics {
+            width: 800px;
+
+            img {
+                height: 180px;
+                transition: height 2s 0;
+            }
+
+            img:hover {
+                height: 200px;
+            }
+        }
+        
+    }
+
+    .who {
+        h3{
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        p {
+        font-size: 1.3rem;        
+       }
+    }
+
+    #contact {
+        background-position: 0 0;
+    }
+
+    footer {
+        height: 180px;
+    }
+
+    .addinfo {
+        img {
+            width: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+        background-position: (0,0);
+        background-size: cover;
+    }
+    nav {
+        padding: 0;
+        p {
+            margin: 0 auto;
+        }
+
+        ul {
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.9);
+            height: 100vh;
+            width: 100vw;
+            top:0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+
+    .hidden {
+        animation-name: moveright;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .showlist {
+        animation-name: moveleft;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .burger {
+        width: 30px;
+        height: 20px;
+        display: block;
+        position: fixed;
+        right: 4%;
+        cursor: pointer;
+        .line {
+            background-color: white;
+            width: 100%;
+            height: 4px;
+            margin: 0 0 4px 0;
+        }
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        top: 70%;
+    }
+}
+
+@keyframes moveright {
+    from {
+        transform: translate(0);
+    } to {
+        transform: translate(100%);
+    }
+}
+
+@keyframes moveleft {
+    from {
+        transform: translate(100%);
+    } to {
+        transform: translate(0);
+    }
+}

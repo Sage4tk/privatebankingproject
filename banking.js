@@ -3,7 +3,6 @@ window.onscroll = () => {
         document.querySelector('nav').style.backgroundColor = "";
     } else if (window.scrollY <= 100) {
         document.querySelector('nav').style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-        document.querySelector('.logo').style.color = "white"
     } else {
         document.querySelector('nav').style.backgroundColor = "rgba(0, 0, 0, 0.7)"
     }
@@ -70,11 +69,11 @@ team.forEach((e) => {
 })
 
 document.querySelector('button').onclick = (e) => {
-    const input = document.querySelectorAll('input');
-
-    input.forEach((el) => {
-        console.log(el)
-    })
+    e.preventDefault();
 }
 
-
+//burger
+document.querySelector('.burger').onclick = () => {
+    document.querySelector('ul').classList.toggle("hidden");
+    document.querySelector('ul').classList.toggle('showlist');
+}

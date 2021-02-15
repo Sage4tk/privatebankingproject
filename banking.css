@@ -96,6 +96,10 @@ nav ul li {
   cursor: pointer;
 }
 
+.burger {
+  display: none;
+}
+
 li::after {
   background-color: #564940;
   width: 0;
@@ -508,6 +512,163 @@ footer {
     -webkit-transform: translate(0);
             transform: translate(0);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .about h2 {
+    font-size: 2.6rem;
+  }
+  .about p {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+  .team {
+    height: 300px;
+    background-position: 0 -180px;
+  }
+  .team h3 {
+    font-size: 2rem;
+  }
+  .ourTeam h2 {
+    font-size: 2.8rem;
+  }
+  .ourTeam .teamPics {
+    width: 800px;
+  }
+  .ourTeam .teamPics img {
+    height: 180px;
+    -webkit-transition: height 2s 0;
+    transition: height 2s 0;
+  }
+  .ourTeam .teamPics img:hover {
+    height: 200px;
+  }
+  .who h3 {
+    font-size: 1.5rem;
+  }
+  .who h4 {
+    font-size: 1.4rem;
+  }
+  .who p {
+    font-size: 1.3rem;
+  }
+  #contact {
+    background-position: 0 0;
+  }
+  footer {
+    height: 180px;
+  }
+  .addinfo img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    background-position: 0, 0;
+    background-size: cover;
+  }
+  nav {
+    padding: 0;
+  }
+  nav p {
+    margin: 0 auto;
+  }
+  nav ul {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .hidden {
+    -webkit-animation-name: moveright;
+            animation-name: moveright;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .showlist {
+    -webkit-animation-name: moveleft;
+            animation-name: moveleft;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .burger {
+    width: 30px;
+    height: 20px;
+    display: block;
+    position: fixed;
+    right: 4%;
+    cursor: pointer;
+  }
+  .burger .line {
+    background-color: white;
+    width: 100%;
+    height: 4px;
+    margin: 0 0 4px 0;
+  }
+  h1 {
+    font-size: 2.8rem;
+    top: 70%;
+  }
+}
+
+@-webkit-keyframes moveright {
+  from {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  to {
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+}
+
+@keyframes moveright {
+  from {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  to {
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+}
+
+@-webkit-keyframes moveleft {
+  from {
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveleft {
+  from {
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
 }
 /*# sourceMappingURL=banking.css.map */
