@@ -18,7 +18,7 @@ const funds = document.querySelector('#funds');
 const mentor = document.querySelector('#mentor');
 
 //fund number display
-fundIncrease = () => {
+(fundIncrease = () => {
     let num = 200371;
     funds.innerHTML = num;
     setInterval(() => {
@@ -26,10 +26,10 @@ fundIncrease = () => {
         num += random;
         funds.innerHTML = num;
     }, 5000)
-}
+})();
 
 //mentor number display
-mentorIncrease = () => {
+(mentorIncrease = () => {
     let num = 49104;
     mentor.innerHTML = num;
     setInterval(() => {
@@ -37,10 +37,10 @@ mentorIncrease = () => {
         num += random;
         mentor.innerHTML = num;
     }, 5000)
-}
+})();   
 
-fundIncrease();
-mentorIncrease();
+// fundIncrease();
+// mentorIncrease();
 
 const team = document.querySelectorAll('img');
 

@@ -226,7 +226,7 @@ li:hover::after {
 
 .ourTeam {
   background-color: white;
-  width: 100%;
+  width: 100vw;
   padding: 80px;
   position: relative;
 }
@@ -252,7 +252,7 @@ li:hover::after {
 }
 
 .teamPics {
-  width: 1000px;
+  max-width: 900px;
   height: 200px;
   margin: 80px auto;
   display: -webkit-box;
@@ -262,12 +262,12 @@ li:hover::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .teamPics img {
@@ -625,6 +625,57 @@ footer {
   h1 {
     font-size: 2.8rem;
     top: 70%;
+  }
+  .about p {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+  .analytics article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+  }
+  .team {
+    background-position-y: -80px;
+    height: 200px;
+  }
+  .team h3 {
+    top: 50%;
+  }
+  .ourTeam {
+    width: 100%;
+  }
+  .teamPics {
+    max-width: 200px;
+    height: 720px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 40px auto;
+  }
+  .teamPics img {
+    height: 100px;
+    width: auto;
+  }
+  .who {
+    width: 300px;
+    padding: 20px;
+  }
+  .addinfo .contactinfo {
+    display: none;
+  }
+  #contact h3 {
+    top: 3%;
+    font-size: 2rem;
+    left: 50%;
+    margin-left: -200px;
+  }
+  #contact form {
+    right: 50%;
+    margin-right: -200px;
   }
 }
 
