@@ -15,6 +15,7 @@ body {
   color: white;
   font-family: 'Times New Roman', Times, serif5;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 header {
